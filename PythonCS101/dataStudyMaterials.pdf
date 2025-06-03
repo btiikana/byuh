@@ -1,0 +1,166 @@
+Real Life Data Engineering Scenarios.
+STACK (assumed for this task):
+Warehouse: BigQuery or Snowflake
+
+Orchestration: dbt (preferred) or Airflow
+
+Language: SQL (main), optional Python
+
+Dashboard Tool: Optional (Looker, Tableau, etc.)
+
+✅ TASK CHECKLIST
+Here's your full workflow like a real engineer:
+
+1. Understand the Business Requirements
+✅ What counts as a signup
+✅ What counts as a real-money trade
+✅ Time window: 24 hours
+✅ Output format
+✅ Refresh cadence (daily)
+
+2. Explore Raw Data Sources
+You're working with two tables:
+
+Table 1: events.user_events
+sql
+Copy
+Edit
+| user_id   | event_name       | event_time           | metadata                        |
+|-----------|------------------|----------------------|----------------------------------|
+| abc123    | user_signed_up   | 2025-04-12 09:31:00  | {"country": "US"}               |
+Table 2: events.trade_events
+sql
+Copy
+Edit
+| user_id   | event_name        | event_time           | metadata                                 |
+|-----------|-------------------|----------------------|-------------------------------------------|
+| abc123    | trade_executed    | 2025-04-12 10:03:00  | {"type": "market", "amount": 500.0, "mode": "real"} |
+🔧 Check:
+
+Do the event names match the spec?
+
+Are timestamps in UTC?
+
+Does metadata have what you need (e.g. trade mode)?
+
+3. Design the SQL Logic
+You’ll:
+
+Get each user’s signup time
+
+Find first real-money trade for each user
+
+Calculate whether it was within 24 hours
+
+4. Write the SQL Transformation
+Here’s your base transformation code to get started:
+
+sql
+Copy
+Edit
+WITH signups AS (
+  SELECT
+    user_id,
+    MIN(event_time) AS signup_time
+  FROM
+    events.user_events
+  WHERE
+    event_name = 'user_signed_up'
+  GROUP BY user_id
+),
+
+real_trades AS (
+  SELECT
+    user_id,
+    event_time AS trade_time
+  FROM
+    events.trade_events
+  WHERE
+    event_name = 'trade_executed'
+    AND metadata:mode = 'real' -- or use metadata['mode'] in Snowflake
+),
+
+joined AS (
+  SELECT
+    s.user_id,
+    s.signup_time,
+    t.trade_time,
+    TIMESTAMP_DIFF(t.trade_time, s.signup_time, MINUTE) AS minutes_after_signup
+  FROM
+    signups s
+  LEFT JOIN real_trades t
+    ON s.user_id = t.user_id
+  WHERE
+    t.trade_time BETWEEN s.signup_time AND TIMESTAMP_ADD(s.signup_time, INTERVAL 24 HOUR)
+)
+
+SELECT
+  user_id,
+  signup_time,
+  MIN(trade_time) AS first_trade_time,
+  COUNT(*) > 0 AS traded_within_24hr
+FROM
+  joined
+GROUP BY user_id, signup_time;
+5. Wrap in dbt (if using it)
+🗂 File: models/user_activation_summary.sql
+sql
+Copy
+Edit
+-- models/user_activation_summary.sql
+-- description: Activation within 24 hours of signup
+
+WITH ...
+-- use the above SQL logic
+dbt_project.yml
+Make sure you have the model added under models: and configured to run daily.
+
+6. Add dbt Tests (Optional But Realistic)
+yaml
+Copy
+Edit
+version: 2
+
+models:
+  - name: user_activation_summary
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+      - name: traded_within_24hr
+        tests:
+          - accepted_values:
+              values: [true, false]
+7. Schedule It to Run Daily
+In dbt Cloud: set schedule to run every 24 hours
+
+In Airflow: add a DAG with BigQueryInsertJobOperator or SnowflakeOperator
+
+8. Create Dashboard or Output Query (Optional)
+sql
+Copy
+Edit
+SELECT
+  DATE(signup_time) AS signup_day,
+  COUNT(*) AS total_signups,
+  SUM(CASE WHEN traded_within_24hr THEN 1 ELSE 0 END) AS active_traders
+FROM
+  analytics.user_activation_summary
+GROUP BY signup_day
+ORDER BY signup_day DESC;
+🎯 Final Deliverables
+
+Deliverable	What It Is
+user_activation_summary.sql	Core SQL model
+schema.yml	dbt tests and documentation
+Scheduled pipeline	Daily refresh
+Optional dashboard	Chart showing activation over time
+🧠 BONUS: Things You’ll Learn Doing This
+Writing complex SQL with joins and time filtering
+
+Handling JSON fields (metadata)
+
+Using dbt or Airflow to schedule transformations
+
+Thinking like a stakeholder (activation metrics)

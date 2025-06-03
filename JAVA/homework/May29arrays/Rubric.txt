@@ -1,0 +1,27 @@
+(1 point) Explain what the term parallel arrays means.
+(2 points) Explain how the try/catch block works.
+(1 point) Describe what your program does in the event of a "file not found" exception.
+(1 point) Show where you read the width and height from the file.
+(1 point) Explain what the Scanner class is used for.
+(1 point) Show where you read the first number in each line.
+(1 point) Show how you allocate space for the X and Y arrays.
+(2 points) Show where you read the (x,y) coordinates from the file and put them in the arrays.
+(1 point) Demonstrate that your program prompts the user to enter a file name, via a popup dialog box.
+(1 point) Demonstrate that your program produces the correct output for square.txt.
+(1 point) Demonstrate that your program produces the correct output for triangles.txt.
+(1 point) Demonstrate that your program produces the correct output for cis202.txt.
+(1 point) Demonstrate that your program produces the correct output for happyface.txt.
+(1 point) Demonstrate that your program produces the correct output for the super.txt.
+(1 point) Show that each major section of the program is commented.
+(1 point) Show that your source code is neatly and consistently indented.
+(1 point) Show that all your variable and method names start with a lowercase letter.
+(1 point) Show that all your class names start with an uppercase letter.
+-------------------------------------------------------
+TOTAL: 20 points
+
+Extras:
+(+2 points) EXTRA CREDIT: Create your own input file, and email it to Bro. Draper. (2 points if your design is his favorite.)
+(+2 points) EXTRA CREDIT: Make it so your pictures scale cleanly when you resize the window. For this to work, you cannot ignore the first line of the file!
+(+2 points) EXTRA CREDIT: Instead of the user entering the filename in a JOptionPane box, pop up a JFileChooser box and let the user select the file directly.
+(+2 points) EXTRA CREDIT: If the user supplies the filename as a command-line parameter, do not show a popup window prompting for the filename at runtime. If there is no command-line parameter, show the popup as usual.
+(+1 point) EARLY BIRD BONUS: if you submit your code and video to Canvas at least 1 day before the due date.
