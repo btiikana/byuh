@@ -4,54 +4,68 @@ import java.awt.Graphics;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
+import java.awt.Component;
 
 public class FunDuck extends JPanel {
-	
+
     ImageIcon duck;
     String userInput;
 
-	public FunDuck() {
+    public FunDuck() {
         duck = new ImageIcon("duck.png");
         userInput = JOptionPane.showInputDialog("Do you want a gift: Choose [Y]es or [N]o");
-        if (userInput.startsWith("Y")) {
-            continue;
-        } else if (userInput.startsWith("N")&& userInput.equalsIgnoreCase("n")) {
-            System.out.println("Sorry that we don't have what you like.");
+
+        if (userInput != null && userInput.trim().toLowerCase().startsWith("Y")) {
+            //continue is invalid, program continues when left empty here.
+        } else if (userInput != null && userInput.trim().equalsIgnoreCase("n")) {
+            JOptionPane.showMessageDialog(null, "Sorry that we don't have what you like.");
             System.exit(0);
         } else {
-            System.out.println("Check your answer and try again!");
+            JOptionPane.showMessageDialog(null,"Check your answer and try again!");
             System.exit(0);
         }
-	}
+    }
 
-	@Override
-	public void paintComponent(Graphics g) {
-        //Background settings
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g); // Always call superclass method first
+
+        // Background settings
         int w = getWidth();
         int h = getHeight();
 
-        //Draw background gray
+        // Draw background gray
         g.setColor(Color.GRAY);
         g.fillRect(0, 0, w, h);
 
-        //create object
-        xYPosition pos = new xYPosition(200, 220);
+        // Create object
+        xYPosition pos = new xYPosition(100, 200);
 
-        //call method
+        // Call method
         drawDuck(g, pos, duck);
-	}
-
-    public void drawDuck(Graphics g, xYPosition pos, ImageIcon duck) {
-        g.drawString("Your duck is drawn!", 200, 200);
-        duck.paintIcon(g, pos, duck);
-        
     }
 
-	public static void main(String[] args) {
-		var window = new JFrame();
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		window.setSize(400,400);
-		window.setContentPane(new FunDuck());
-		window.setVisible(true);
-	}
+    public void drawDuck(Graphics g, xYPosition pos, ImageIcon duck) {
+        g.setColor(Color.BLACK);
+        g.drawString("Your duck is drawn!", 200, 200);
+        duck.paintIcon(pos, g, pos.x, pos.y); // Correct method signature
+    }
+
+    public static void main(String[] args) {
+        JFrame window = new JFrame();
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setSize(400, 400);
+        window.setContentPane(new FunDuck());
+        window.setVisible(true);
+    }
+
+    // Inner class for position (assuming you need it)
+    static class xYPosition extends Component {
+        int x, y;
+
+        public xYPosition(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
 }

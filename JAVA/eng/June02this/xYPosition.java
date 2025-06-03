@@ -1,10 +1,12 @@
-public class xYPosition {
+public class xYPosition extends FunDuck{
 
     int x;
     int y;
 
     //parameterized constructor
     public xYPosition(int xx, int yy) {
+        x = xx;
+        y = yy;
 
     }
 
