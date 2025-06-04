@@ -2,15 +2,11 @@ import java.awt.Component;
 import javax.swing.JOptionPane;
 
 public class Textblocks {
-
-    String showMessage;
+    
     String greet;
 
     public Textblocks() {
-        greet = """
-        Hello Tione, Welcome home Son!
-        Hello Destiny, Welcome home Daughter!
-        """;
+        greet = ("Hello Tione, Welcome home Son!" + "\n" + "Hello Destiny, Welcome home Daughter!");
     }
 
     public void display() {
