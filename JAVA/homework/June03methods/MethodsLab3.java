@@ -33,7 +33,6 @@ public class MethodsLab3 extends JPanel {
 			System.exit(0);
 
 		}
-		
 	}
 
 	public void parseCommand(String command, Graphics g) {
@@ -65,10 +64,6 @@ public class MethodsLab3 extends JPanel {
         }
     }
 
-	public void backgroundSettings(Graphics g, int x, int y, int width, int height) {
-		g.setColor(Color.BLACK); // Color content for this method
-	}
-
 	//method to change color
     public void changeColor(int red, int green, int blue, Graphics g) {
 		Color newColor = new Color(red, green, blue);
@@ -94,8 +89,6 @@ public class MethodsLab3 extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		/*CALL METHODS HERE*/
-		//Background method
-		backgroundSettings(g, 0, 0, getWidth(), getHeight());
 
 		for (String line : instructions) {
 			parseCommand(line, g);
@@ -103,7 +96,7 @@ public class MethodsLab3 extends JPanel {
     }
 
 	public static void main(String[] args) {
-		var window = new JFrame("Method Lab 2");
+		var window = new JFrame("Method Lab 3");
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setSize(340,400);
 		window.setContentPane(new MethodsLab3());

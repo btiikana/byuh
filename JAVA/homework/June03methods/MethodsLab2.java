@@ -30,7 +30,6 @@ public class MethodsLab2 extends JPanel {
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "File not found!");
 			System.exit(0);
-
 		}
 		
 	}
@@ -64,8 +63,9 @@ public class MethodsLab2 extends JPanel {
         }
     }
 
-	public void backgroundSettings(Graphics g, int x, int y, int width, int height) {
-		g.setColor(Color.BLACK); // Color content for this method
+	public void backgroundSettings(Graphics g, int x, int y) {
+		g.setColor(Color.BLACK);
+		g.fillRect(x, y, getWidth(), getHeight());
 	}
 
 	//method to change color
@@ -94,20 +94,11 @@ public class MethodsLab2 extends JPanel {
 	public void paintComponent(Graphics g) {
 		/*CALL METHODS HERE*/
 		//Background method
-		backgroundSettings(g, 0, 0, getWidth(), getHeight());
-
-		//Practice accessing and manipulating data
-		int middle = instructions.size()/2;
-		int lineNumber = 0;
+		backgroundSettings(g, 0, 0);
 
 		for (String line : instructions) {
-			if (lineNumber == middle) {
-				g.setColor(Color.BLACK);
-			}
 			parseCommand(line, g);
-			lineNumber++;
-        }
-		g.drawString("Middle line contents are in BLACK", 10, 170);
+		}
     }
 
 	public static void main(String[] args) {

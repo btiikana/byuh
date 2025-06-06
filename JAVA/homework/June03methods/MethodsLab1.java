@@ -13,8 +13,9 @@ public class MethodsLab1 extends JPanel {
 	public MethodsLab1() {
 	}
 
-	public void backgroundSettings(Graphics g, int x, int y, int width, int height) {
+	public void backgroundSettings(Graphics g, int x, int y) {
 		g.setColor(Color.BLACK);
+		g.fillRect(x, y, getWidth(), getHeight());
 	}
 
 	//method to change color
@@ -42,7 +43,7 @@ public class MethodsLab1 extends JPanel {
 	public void paintComponent(Graphics g) {
 	/*CALL METHODS HERE*/
 		//Background method
-		backgroundSettings(g, 0, 0, getWidth(), getHeight());
+		backgroundSettings(g, 0, 0);
 		
 		// Upside-down Red triangle
         changeColor(255, 0, 0, g);
