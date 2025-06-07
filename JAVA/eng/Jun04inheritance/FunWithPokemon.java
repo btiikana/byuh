@@ -1,21 +1,20 @@
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import java.awt.Graphics;
-
 public class FunWithPokemon extends JPanel{
 
-    private Pokemon ej;
+    private Pichu ej;
     private Pokemon rylan;
     private Pokemon billy;
 
     public FunWithPokemon() {
-        ej = new Pokemon("Ej's pet pichu", 60);
-        rylan = new Pokemon("Rylan's pet", 70);
-        billy = new Pokemon("Rylan's pet", 70);
+        ej = new Pichu("Ej's pet pichu");
+        rylan = new Pokemon("Rylan's pet", 39);
+        billy = new Pokemon("Rylan's pet", 45);
         ej.talk();
         rylan.talk();
         ej.setPicture("pichu.png");
-        rylan.setPicture("Charmander.png");
+        //rylan.setPicture("Charmander.png");
         rylan.move(200, 50);
         billy.move(50, 300);
     }
