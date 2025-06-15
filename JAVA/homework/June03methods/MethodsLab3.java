@@ -88,8 +88,6 @@ public class MethodsLab3 extends JPanel {
 
 	@Override
 	public void paintComponent(Graphics g) {
-		/*CALL METHODS HERE*/
-
 		for (String line : instructions) {
 			parseCommand(line, g);
 		}

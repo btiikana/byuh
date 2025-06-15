@@ -25,8 +25,8 @@ public class CustomClass extends JPanel {
     //method caller
     public void methodCaller(Graphics graph) {
         //Create objects before calling methods
-        Vertex pos1 = new Vertex(0, -50);
-        Vertex pos2 = new Vertex(100, -80);
+        Pyramid pos1 = new Pyramid(0, -50);
+        Pyramid pos2 = new Pyramid(100, -80);
 
         //call methods here
         drawSheep(graph, pos1, Color.RED);
@@ -35,7 +35,7 @@ public class CustomClass extends JPanel {
         // drawSheep(graph, 100, -10, Color.GREEN);
     }
 
-    public void drawSheep(Graphics graph, Vertex pos, Color C) {
+    public void drawSheep(Graphics graph, Pyramid pos, Color C) {
         graph.setColor(C);
         graph.fillOval(pos.x+75, pos.y+200, 225, 100);
         graph.fillOval(pos.x+50, pos.y+150, 75, 75);
@@ -45,7 +45,7 @@ public class CustomClass extends JPanel {
         graph.fillOval(pos.x+250, pos.y+250, 25, 100);
     }
 
-    public void drawSheep(Graphics graph, Vertex pos) {
+    public void drawSheep(Graphics graph, Pyramid pos) {
         drawSheep(graph, pos, Color.WHITE);
     }
 
