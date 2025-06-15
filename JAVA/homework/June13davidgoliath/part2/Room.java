@@ -6,6 +6,7 @@ import java.awt.*;
 //----------------------PART 2----------------
 //Room class
 public class Room {
+    //fields
     private Point pos;
     private Room exitEast;
     private Room exitWest;

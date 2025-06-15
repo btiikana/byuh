@@ -8,6 +8,7 @@ import java.util.ArrayList;
 //----------------------PART 1----------------
 //Main class
 public class Main extends JPanel {
+    //fields
     private ArrayList<Room> rooms;
 	private Color bgroundColor;
 

@@ -6,6 +6,7 @@ import java.awt.*;
 //----------------------PART 1----------------
 //Room class
 public class Room {
+    //fields
     private Point pos;
     private Color shapeColor;
 

@@ -1,0 +1,12 @@
+(2 points) Explain the concept of object references.
+(2 points) Explain what a "null" variable is.
+(2 points) Show how you instantiate 16 Room objects.
+(2 points) Show how you set the position of each of the Rooms.
+(2 points) Explain how your Room.draw() method works.
+(2 points) Explain how your set*Exit methods work.
+(2 points) Demonstrate that, other than painting the background, Main's paintComponent method does nothing but call the draw method on the Room objects.
+(2 points) Demonstrate that the rooms are drawn with spaces showing where the doors are.
+(1 point) Show that each major section of the program is commented.
+(1 point) Show that your source code is neatly and consistently indented.
+(1 point) Show that all your variable and method names start with a lowercase letter.
+(1 point) Show that all your class names start with an uppercase letter.
