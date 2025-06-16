@@ -1,0 +1,52 @@
+🔹 What is an Abstract Class?
+A class that cannot be instantiated (you can’t do new)
+
+Used as a base class to be extended by subclasses
+
+Can have:
+
+Abstract methods (no body)
+
+Regular methods (with body)
+
+Fields/variables
+
+Constructors
+
+🔹 When to Use Abstract Classes?
+When you want to:
+
+Share common code (fields or methods)
+
+Force subclasses to implement specific methods
+
+Define a template or base structure for all child classes
+
+Declaring an Abstract Class
+java
+Copy
+Edit
+public abstract class Animal {
+    public abstract void makeSound();  // must be implemented in child class
+
+    public void sleep() {
+        System.out.println("Zzz...");
+    }
+}
+Use abstract keyword in class and method
+
+Can contain both abstract and regular methods
+
+🔹 What is an Abstract Method?
+A method without a body (just a signature)
+
+Must be declared with the abstract keyword
+
+Only allowed inside abstract classes
+
+Must be overridden in the first non-abstract subclass
+
+java
+Copy
+Edit
+public abstract void move();  // no body here!
