@@ -3,7 +3,6 @@ import java.awt.*;
 //Name: Betero Tiikana
 //Course: CS202
 
-//----------------------PART 2----------------
 //Room class
 public class Room {
     //fields
@@ -26,6 +25,7 @@ public class Room {
         eraser = new Color(210, 240, 210); //erase walls for corridors
     }
 
+    //method to draw
     public void draw(Graphics g) {
         int x = pos.x;
         int y = pos.y;
@@ -34,13 +34,13 @@ public class Room {
         int[] xPoints = new int[3];
         int[] yPoints = new int[3];
 
-        xPoints[0] = x + 40;  // top
+        xPoints[0] = x + 40; // top
         yPoints[0] = y;
 
-        xPoints[1] = x;       // bottom-left
+        xPoints[1] = x; // bottom-left
         yPoints[1] = y + 80;
 
-        xPoints[2] = x + 80;  // bottom-right
+        xPoints[2] = x + 80; // bottom-right
         yPoints[2] = y + 80;
 
         shapeColor = new Color(120, 180, 120);
@@ -90,7 +90,7 @@ public class Room {
         }
     }
 
-    //methods to accept neighboring rooms
+    //setter methods to accept neighboring rooms
     public void setEastExit(Room r) {
         exitEast = r;
         r.exitWest = this;
@@ -109,5 +109,10 @@ public class Room {
     public void setSouthExit(Room r) {
         exitSouth = r;
         r.exitNorth = this;
+    }
+
+    //getter methods
+    public Point getPosition() {
+        return pos;
     }
 }

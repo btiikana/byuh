@@ -5,17 +5,24 @@ import java.util.ArrayList;
 //Name: Betero Tiikana
 //Course: CS202
 
-//----------------------PART 2----------------
 //Main class
 public class Main extends JPanel {
     //fields
     private ArrayList<Room> rooms;
     private Color bgroundColor;
+    private Goliath goliath;
+    private David david;
+    private ArrayList<Stone> stones;
 
+    //default contructor
     public Main() {
         rooms = new ArrayList<>();
-        //instantiate color for bacgkround
+        //instantiate color for background
         bgroundColor = new Color(210, 240, 210);
+
+        david = new David(); //instantiate David
+        goliath = new Goliath(); //instantiate Goliath
+        stones = new ArrayList<>(); //instantiate stone ArrayList
 
         // First row and rooms in it
         Room room1Row1 = new Room(20, 20);
@@ -116,6 +123,32 @@ public class Main extends JPanel {
         room3Row4.setNorthExit(room3Row3);
         //room 4
         room4Row4.setNorthExit(room4Row3);
+
+        //-----David, Goliath & Stone-----
+        david.setCurrentRoom(room1Row4); //set-up room where david will start at.
+        goliath.setCurrentRoom(room4Row4); //set-up room where Goliath will be.
+
+        //Instantiate & assign 5 stones
+        Stone stone1 = new Stone(); //1 stone
+        Stone stone2 = new Stone(); //2 stone
+        Stone stone3 = new Stone(); //3 stone
+        Stone stone4 = new Stone(); //4 stone
+        Stone stone5 = new Stone(); //5 stone
+        //add to stones array list
+        stones.add(stone1);
+        stones.add(stone2);
+        stones.add(stone3);
+        stones.add(stone4);
+        stones.add(stone5);
+
+        //set-up rooms where the stones will be.
+        stone1.setCurrentRoom(room1Row1);
+        stone2.setCurrentRoom(room4Row2);
+        stone3.setCurrentRoom(room1Row3);
+        stone4.setCurrentRoom(room3Row3);
+        stone5.setCurrentRoom(room2Row4);
+
+
     }
 
     //main class inheriting paintComponent
@@ -131,6 +164,11 @@ public class Main extends JPanel {
 
         for (Room room : rooms) {
             room.draw(g);
+            david.draw(g);
+            goliath.draw(g);
+        }
+        for (Stone stone : stones) {
+            stone.draw(g);
         }
     }
 
