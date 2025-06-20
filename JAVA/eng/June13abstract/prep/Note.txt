@@ -1,0 +1,8 @@
+Compile-time bugs are
+BETTER THAN
+Run-time bugs!
+
+Medicating Run-time bugs is done through declaring/flagging a keyword "abstract" in a class signature.
+It forces unintended instantiation to be displayed as compile bug so that we can correct it right away
+in our main class.
+Abstract makes a compiler work for you.

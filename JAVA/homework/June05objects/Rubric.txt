@@ -1,0 +1,22 @@
+RUBRIC:
+In your video, please do the following:
+
+(1 point) Show that your program consists of two classes, one that extends JPanel and one that does not.
+(1 point) Show all the fields in your Pyramid class, and explain what they're used for.
+(1 point) Show that you have two overloaded constructors.
+(1 point) Show that one constructor calls the other with the this keyword.
+(1 point) Show all the methods in your Pyramid class, and explain what each one does.
+(1 point) Show that Pyramid's fields are private and its methods and constructors are public.
+(1 point) In your "main" class, show where you declare both Pyramid objects.
+(1 point) In your "main" class, show where you instantiate both Pyramid objects.
+(1 point) Show that you're using a different constructor for each Pyramid object.
+(1 point) Show how you customize the color scheme of each Pyramid object.
+(1 point) Show how you customize the position of each Pyramid object.
+(2 points) Demonstrate that your program correctly displays two pyramids on the screen.
+(1 point) Demonstrate that your program uses a Pyramid object to draw the pyramid, instead of doing the drawing itself.
+(1 point) Demonstrate that each pyramid has a different color scheme.
+(1 point) Demonstrate that each pyramid has a different position on the screen.
+(1 point) Show that each major section of the program is commented.
+(1 point) Show that your source code is neatly and consistently indented. 
+(1 point) Show that all your variable and method names start with a lowercase letter.
+(1 point) Show that all your class names start with an uppercase letter.

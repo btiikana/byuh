@@ -1,0 +1,2 @@
+def loopStrings(food):
+    

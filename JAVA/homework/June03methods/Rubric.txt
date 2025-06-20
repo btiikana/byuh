@@ -1,0 +1,15 @@
+RUBRIC:
+In your video, you must:
+
+(2 points) Show how you read in the file and store each line in an arraylist.
+(2 points) Show that you wrote separate methods for changing color, drawing circles, and drawing triangles.
+(2 points) Explain how your drawCircle method treats the x,y coordinates as the center of the oval, and the third parameter as a radius.
+(2 points) Explain the logic of the parseCommand method.
+(2 points) Demonstrate that your program renders pumpkin.txt correctly.
+(2 points) Demonstrate that your program renders guy.txt correctly.
+(2 points) Demonstrate that your program renders david.txt correctly.
+(2 points) Demonstrate that your program renders superman.txt correctly.
+(1 point) Show that each major section of the program is commented. 
+(1 point) Show that your source code is neatly and consistently indented.
+(1 point) Show that all your variable and method names start with a lowercase letter.
+(1 point) Show that all your class names start with an uppercase letter.

@@ -1,0 +1,38 @@
+🔹Why Use Interfaces?
+ What is an Interface?
+A blueprint for classes
+
+Contains method signatures, not implementations (by default)
+
+Says: "Any class that implements me must do these actions"
+
+🔹 Why Use Interfaces?
+To define shared abilities (like fly(), drive())
+
+To allow multiple inheritance (Java only allows 1 superclass, but many interfaces)
+
+To enforce a common rule across unrelated classes
+
+🔹 Declaring an Interface
+java
+Copy
+Edit
+public interface Flyable {
+    void fly();  // implicitly public and abstract
+}
+No body {} for abstract methods
+
+All methods are public abstract by default
+
+🔹 Implementing an Interface
+java
+Copy
+Edit
+public class Bird implements Flyable {
+    public void fly() {
+        System.out.println("Bird is flying");
+    }
+}
+Use implements
+
+You must override all interface methods (unless the class is abstract)

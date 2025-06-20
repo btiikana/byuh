@@ -1,0 +1,30 @@
+SCOPE
+    -The part of your program where a fiven variable has mean.
+    -In java, a variable's scope is the block {} it was declared in.
+    -You cannot use VAR with FIELDS
+
+UNDEERSTANDING VARIABLES AND THEIR POSITIONS.
+    For example:
+        public class Variables {
+
+            int x = 20;
+
+            public void method (String[] args) {
+                int x = 5; --------------> This is a declaration of a new variable.
+                x = 5; ------------------> When you don't declare the type you are just updating the FIELDS Variable.
+                System.out.println(x) ---> This will print FIELDS Variable.
+            }
+
+            int x = 6; ------------------> This isn't practical as it has no value because it is read at the very lastly.
+        }
+
+LEARNING ABOUT A CONSTRUCTOR
+    -It is similar to a method, except:
+    -Its name is ALWAYS the same name as the class.
+    -It has no "return type" (not even "void")
+    -When you call it you have to include "new".
+
+    For example:
+        Public Variable() {
+            // Empty
+        }

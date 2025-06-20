@@ -1,0 +1,22 @@
+RUBRIC:
+In your video, you must:
+
+(2 points) Explain how the constructor of the Sprite class works.
+(2 points) Explain how the constructor of the David class works.
+(2 points) Explain how the draw method of the Sprite class works.
+(2 points) Show that your Stone and Goliath classes are simple; just a constructor but no methods.
+(2 points) Explain what a getter and setter is. Show any getters and setters in your program.
+(2 points) Demonstrate that the position of each sprite is based solely on the room it's in.
+(2 points) Demonstrate that Sprite's draw method renders the image in the center of its room.
+(2 points) Demonstrate that all sprites are correctly displayed in different rooms.
+(1 point) Show that each major section of the program is commented.
+(1 point) Show that your source code is neatly and consistently indented.
+(1 point) Show that all your variable and method names start with a lowercase letter.
+(1 point) Show that all your class names start with an uppercase letter.
+-------------------------------------------------------
+TOTAL: 20 points
+
+Extra:
+(+1 point) EARLY BIRD BONUS: if you submit your code to Canvas at least 1 day before the due date.
+(+2 points) EXTRA CREDIT: Create your own image files instead of the ones I supply. 
+They must be of your own creation, not ones you found online or generated via AI.

@@ -1,0 +1,5 @@
+burger 10 2
+pizza 11 4
+fried chicken 15 6
+Loco Moco 18 8
+shrimp 19 1

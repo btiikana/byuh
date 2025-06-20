@@ -1,0 +1,3 @@
+POLYMORPHISM:
+
+It lets you treat objects of the same supertype, as if they were all the same suptype.

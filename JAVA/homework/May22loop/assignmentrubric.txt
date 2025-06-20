@@ -1,0 +1,20 @@
+(1 point) Explain how you calculate the width of the cells.
+(1 point) Explain how you calculate the height of the cells.
+(2 points) Explain how you calculate the position of the text within each cell.
+(2 points) Explain how you compute the contents of the cells.
+(2 points) Demonstrate that the table cells scale smoothly when you resize the window.
+(2 points) Demonstrate that the numbers stay in their correct cells when you resize the window.
+(2 points) Show that the numbers in the multiplication table are mathematically accurate.
+(2 points) For Part 2: Demonstrate that the table contains a user-specified number of rows/columns.
+(2 points) For Part 3: Show that the numbers in the addition table are mathematically accurate.
+(1 point) Show that each major section of the program is commented.
+(1 point) Show that your source code is neatly and consistently indented.
+(1 point) Show that all your variable and method names start with a lowercase letter.
+(1 point) Show that all your class names start with an uppercase letter.
+-------------------------------------------------------
+TOTAL: 20 points
+
+Extras:
+(+1 point) EARLY BIRD BONUS: if you submit your code and video to Canvas at least 1 day before the due date.
+(+2 points) EXTRA CREDIT Make the font bigger/smaller based on the window size.
+(+1 point) EXTRA CREDIT: Give the first row and column of cells a different background color, for example:

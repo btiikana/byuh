@@ -1,0 +1,28 @@
+p.v paintComponent(Graphics g){
+    for (var ej: instructions) {
+        parseCommand(ej, g);
+    }
+}
+
+-------------------------------------
+
+//Constructor
+p. MethodLab() {
+    file variable;
+    Scanner variable;
+    try {
+        while(s.hasNext() == T) {
+            mark = s.nextLine();
+            instructions.add(mark); 
+        }
+    }
+}
+
+-------------------------------------
+
+p.v. parseCommand(String ej, Graphics g) {
+    rename = ej.split(" ");
+    if x = Integer.parseInt
+    (neneka[1]);
+
+}
