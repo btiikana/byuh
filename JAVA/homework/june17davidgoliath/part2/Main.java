@@ -147,6 +147,11 @@ public class Main extends JPanel {
         stone3.setCurrentRoom(room1Row3);
         stone4.setCurrentRoom(room3Row3);
         stone5.setCurrentRoom(room2Row4);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4256eb4c4e2c49c55ed7122f02fe9bb547847302
     }
 
     //main class inheriting paintComponent
