@@ -1,0 +1,21 @@
+RUBRIC:
+In your video, you must:
+
+(2 points) Explain what an abstract class is. How is it different from a regular class? Which of your classes is abstract?
+(2 points) Explain what an interface is. How is it different from an abstract class? From a regular class?
+(2 points) Explain why you have to include all the KeyListener methods in your class.
+(2 points) Show how you force the window to refresh each time David moves.
+(2 points) Describe how your move* methods work.
+(2 points) Describe how your keyPressed method works.
+(2 points) Demonstrate that David moves up, down, right, left when the user pushes the arrow keys.
+(2 points) Demonstrate that David cannot walk through walls.
+(1 point) Show that each major section of the program is commented.
+(1 point) Show that your source code is neatly and consistently indented.
+(1 point) Show that all your variable and method names start with a lowercase letter.
+(1 point) Show that all your class names start with an uppercase letter.
+-------------------------------------------------------
+TOTAL: 20 points
+
+Extra:
+(+1 point) EARLY BIRD BONUS: if you submit your code and video to Canvas at least 1 day before the due date.
+(+3 points) EXTRA CREDIT: Make this a two-player game! Map another set of keys (perhaps W,A,S,D or I,J,K,L) to control Goliath's movements.
