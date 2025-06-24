@@ -1,0 +1,10 @@
+Polymorphism only works downstream not upstream, meaning you can't
+change the main object with the subobject. For example:
+
+Animal cat = new Cat();
+Cat lion = new Lion();
+Lion lione = new Cat() --> you cannot do this!
+
+Memory leaks are not a problem in java as JVM has it's own garbage collector.
+This garbage collector deletes any unused objects in the program and allocates the
+space back to the system for other programs to use.

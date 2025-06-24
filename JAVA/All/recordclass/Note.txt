@@ -1,0 +1,10 @@
+Record is a type of class
+- creates a constructor for you
+- create getters
+- create equals()
+- create toString()
+- Objects in record classes are immutable
+- Once an object inside records classes instantiated they cannot be changed
+- Record classes have variables that are always Final type
+
+* Setters methods do not exist in record classes

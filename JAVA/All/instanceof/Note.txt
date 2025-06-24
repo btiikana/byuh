@@ -1,0 +1,12 @@
+instanceof - Java Quick Insight
+
+Use instanceof to check if an object is a certain type before casting.
+It prevents ClassCastException and lets you safely apply class-specific logic.
+
+Syntax:
+object instanceof ClassName
+
+Think of it like:
+“Is this object really a ClassName at runtime?”
+
+Always returns false if the object is null.

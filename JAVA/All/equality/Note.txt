@@ -1,0 +1,57 @@
+Comparing Arrays and ArrayLists in Java – Notes
+
+🔸 1. Comparing Objects with == (Shallow Comparison)
+The == operator checks if two variables point to the same object in memory, not the values inside.
+
+Array Example (from your code):
+
+java
+Copy
+Edit
+int[] a = {3, 1, 2, 4};
+int[] b = a;
+int[] c = {3, 1, 2, 4};
+
+System.out.println(a == b); // true  (same object)
+System.out.println(b == c); // false (different object)
+ArrayList Example (from your code):
+
+java
+Copy
+Edit
+abc = new ArrayList<>();
+abc.add("Hello");
+abc.add(" World");
+
+def = abc;  // same object
+ghi = new ArrayList<>();
+ghi.add("Hello");
+ghi.add(" World");
+
+System.out.println(abc == def); // true
+System.out.println(def == ghi); // false
+🔸 2. Comparing Objects with .equals() (Deep Comparison for Lists)
+.equals() checks values in objects (works well for ArrayList).
+But for arrays, a.equals(b) still checks memory — not values.
+
+ArrayList Example:
+
+java
+Copy
+Edit
+System.out.println(abc.equals(def)); // true (same values and same object)
+System.out.println(ghi.equals(def)); // true (same values, different objects)
+🔸 3. Properly Comparing Array Contents with Arrays.equals()
+Arrays don’t override .equals() — use Arrays.equals() for value comparison.
+
+Array Example:
+
+java
+Copy
+Edit
+System.out.println(Arrays.equals(a, b)); // true
+System.out.println(Arrays.equals(b, c)); // true
+
+Boolean == is a shallow: check for object's location
+equals() is deep: checks for values inside the objects
+Arrays.equals() must be used when comparing arrays only!

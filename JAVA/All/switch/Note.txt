@@ -1,0 +1,7 @@
+Switch Statement
+
+Must have these conditions:
+1. Only comparing one variable
+2. Only comparing == (not <,>,<=,>=,!=)
+3. Only comparing whole numbers, chars, Strings, or enums
+4.No && logic (but || is okay)

@@ -1,0 +1,9 @@
+HOOK
+
+- Hooks are optional methods in a base class that let subclasses
+“hook into” the process without changing the core logic.
+- Default behavior: usually does nothing
+- Override only if needed
+- Used inside a fixed algorithm (like a template method)
+- Goal: Let subclasses customize parts of the process without rewriting everything
+- “Use a hook when you want to offer flexibility without forcing it.

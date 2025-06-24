@@ -1,0 +1,60 @@
+What is Polymorphism?
+Polymorphism means "many forms."
+In Java, it lets one reference type (like a superclass) be used to refer to objects of different subclasses.
+
+Types of Polymorphism
+Compile-time Polymorphism (Method Overloading)
+Same method name, different parameter types or counts, in the same class.
+
+Runtime Polymorphism (Method Overriding)
+Subclass provides a specific version of a method already defined in its superclass.
+
+Use Cases
+Writing reusable and flexible code
+
+Managing different objects with one common interface or superclass
+
+Simplifying collection handling (e.g., ArrayList<Animal>)
+
+Supporting plug-in behavior and customization in OOP systems
+
+Simple Example
+java
+Copy
+Edit
+abstract class Animal {
+    abstract void makeSound();
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+class Cat extends Animal {
+    void makeSound() {
+        System.out.println("Meow");
+    }
+}
+In Main:
+java
+Copy
+Edit
+Animal a1 = new Dog();
+Animal a2 = new Cat();
+
+a1.makeSound();  // Woof
+a2.makeSound();  // Meow
+Or using a collection:
+
+java
+Copy
+Edit
+ArrayList<Animal> animals = new ArrayList<>();
+animals.add(new Dog());
+animals.add(new Cat());
+
+for (Animal a : animals) {
+    a.makeSound();  // Each makes its own sound
+}

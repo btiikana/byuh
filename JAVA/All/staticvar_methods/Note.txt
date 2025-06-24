@@ -1,0 +1,25 @@
+Non static variables and methods will let the objects have their own values.
+Static variable and methods will let the objects share the most recent values set.
+
+public class Names {
+    private String name;  // non-static: each object gets its own 'name'
+    static String sharedName;  // static: shared by all objects
+
+    public Names(String n) {
+        this.name = n;
+        sharedName = n;  // update the static variable too
+    }
+
+    public void printNames() {
+        System.out.println("Personal name: " + name);
+        System.out.println("Shared name: " + sharedName);
+    }
+
+    public static void main(String[] args) {
+        Names n1 = new Names("Alice");
+        Names n2 = new Names("Bob");
+
+        n1.printNames();
+        n2.printNames();
+    }
+}
