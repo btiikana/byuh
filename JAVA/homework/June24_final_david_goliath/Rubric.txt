@@ -1,0 +1,27 @@
+RUBRIC:
+In your video, you must:
+
+(1 point) Show that both Sprite and Room implement the Drawable interface.
+(1 point) Demonstrate that your program renders all graphics as "drawables" not as sprites and rooms.
+(2 points) Demonstrate that you're using a static field for the room size instead of a literal value.
+(2 points) Show where you declare a field to keep track of how many stones David has.
+(2 points) Explain how you detect collisions between David and the stones.
+(2 points) Explain how you detect collisions between David and Goliath.
+(2 points) Explain how you make the stones disappear when David touches them.
+(2 points) Demonstrate that the correct message dialogs are shown for winning and losing the game.
+(2 points) Demonstrate that when the game restarts, David is unarmed and the stones are back in their starting rooms.
+(1 point) Show that each major section of the program is commented.
+(1 point) Show that your source code is neatly and consistently indented.
+(1 point) Show that all your variable and method names start with a lowercase letter.
+(1 point) Show that all your class names start with an uppercase letter.
+-------------------------------------------------------
+TOTAL: 20 points
+
+Extra:
+(+1 point) EARLY BIRD BONUS: if you submit your code and video to Canvas at least 1 day before the due date.
+(+5 points) EXTRA CREDIT: Add sound effects to the game.
+(+3 points) EXTRA CREDIT: Override the equals method in the Sprite class so that two sprites are equal iff they are in the same room. Use your newly-created equals method when you check if David touches a stone, or meets Goliath.
+(+10 points) EXTRA CREDIT: Make Goliath move on his own! Have him move to an adjacent room every second. (See the API documentation for TimerLinks to an external site..)
+(+10 points) EXTRA CREDIT: In addition to the above, have Goliath move intelligently, so that each second he moves closer to David.
+(+5 points) EXTRA CREDIT: When the game restarts, randomize the positions of the 5 stones, of David, and of Goliath. Ensure that no two sprites start in the same cell.
+(+5 points) EXTRA CREDIT: When the game restarts, randomize the doorways. Ensure that the game is still consistently playable.
