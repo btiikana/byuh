@@ -34,6 +34,11 @@ public class Main implements Program {
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
+            line = line.trim();
+
+            if (line.equals("")) {
+                continue;
+            }
 
             if (line.equals("***")) {
                 break;
@@ -41,6 +46,8 @@ public class Main implements Program {
 
             processLine(line);
         }
+
+        scanner.close();
     }
 
     /**
